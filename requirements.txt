@@ -1,9 +1,5 @@
-pymongo
-pymongo[srv]
-dnspython
+astrapy==0.7.6
 pandas
 numpy
-ensure
-pytest
 
 -e .
