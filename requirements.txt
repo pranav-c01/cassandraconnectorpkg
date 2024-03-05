@@ -1,4 +1,4 @@
-astrapy==0.7.6
+astrapy==0.2.0
 pandas
 numpy
 
