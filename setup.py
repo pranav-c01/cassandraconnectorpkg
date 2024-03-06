@@ -39,6 +39,7 @@ setup(
     },
     packages=find_packages(),
     install_requires = ["astrapy==0.2.0","pandas","numpy","ensure","pytest==7.1.3"]
+    
     )
 
 
