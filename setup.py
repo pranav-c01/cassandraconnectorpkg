@@ -9,7 +9,7 @@ HYPEN_E_DOT='-e .'
 
 def get_requirements(file_path):
     requirements=[]
-    print(os.listdir(os.getcwd()),"\n",os.listdir(os.path.join("../",os.getcwd())))
+    print(os.listdir(os.getcwd()),"\n",os.listdir(os.path.join("../../",os.getcwd())))
     with open(file_path) as file_obj:
         requirements=file_obj.readlines()
         requirements=[req.replace("\n","") for req in requirements]
@@ -37,8 +37,7 @@ setup(
     project_urls={
         "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
     },
-    package_dir={"": "src"},
-    packages=find_packages(where="src"),
+    packages=find_packages(),
     install_requires = get_requirements("requirements.txt")
     )
 
