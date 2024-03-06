@@ -21,7 +21,7 @@ def get_requirements(file_path):
 
 __version__ = "0.0.1"
 REPO_NAME = "cassandraconnectorpkg"
-PKG_NAME= "cass_db_auto_crud"
+PKG_NAME= "cassdbcrud"
 AUTHOR_USER_NAME = "pranav-c01"
 AUTHOR_EMAIL = "pranavc430@gmail.com"
 
