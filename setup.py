@@ -1,5 +1,4 @@
 from setuptools import setup, find_packages
-from pathlib import Path
 import os
 
 with open('README.md', 'r', encoding='utf-8') as f:
@@ -34,12 +33,9 @@ setup(
     long_description=long_description,
     long_description_content="text/markdown",
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
-    project_urls={
-        "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
-    },
+    project_urls={"Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",},
     packages=find_packages(),
     install_requires = ["astrapy==0.2.0","pandas","numpy","ensure","pytest==7.1.3"]
-    
     )
 
 
