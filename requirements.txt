@@ -3,5 +3,5 @@ pandas
 numpy
 ensure
 pytest
-
+flake8==5.0.4
 -e .
