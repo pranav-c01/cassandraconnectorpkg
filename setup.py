@@ -38,8 +38,7 @@ setup(
         "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
     },
     packages=find_packages(),
-    install_requires = get_requirements("./requirements.txt")
-#["astrapy==0.2.0","pandas","numpy","ensure","pytest==7.1.3"] #
+    install_requires = ["astrapy==0.2.0","pandas","numpy","ensure","pytest==7.1.3"]
     )
 
 
