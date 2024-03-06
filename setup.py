@@ -19,7 +19,7 @@ def get_requirements(file_path):
 
     return requirements
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 REPO_NAME = "cassandraconnectorpkg"
 PKG_NAME= "cassdbcrud"
 AUTHOR_USER_NAME = "pranav-c01"
