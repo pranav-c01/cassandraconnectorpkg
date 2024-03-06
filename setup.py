@@ -21,7 +21,7 @@ def get_requirements(file_path):
 
 __version__ = "0.0.1"
 REPO_NAME = "cassandraconnectorpkg"
-PKG_NAME= "databaseautomation"
+PKG_NAME= "cass_db_auto_crud"
 AUTHOR_USER_NAME = "pranav-c01"
 AUTHOR_EMAIL = "pranavc430@gmail.com"
 
@@ -38,7 +38,8 @@ setup(
         "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
     },
     packages=find_packages(),
-    install_requires = ["astrapy==0.2.0","pandas","numpy","ensure","pytest==7.1.3"]
+    install_requires = get_requirements("./requirements.txt")
+#["astrapy==0.2.0","pandas","numpy","ensure","pytest==7.1.3"]
     )
 
 
