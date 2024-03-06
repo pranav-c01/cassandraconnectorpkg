@@ -1,0 +1,106 @@
+﻿2024-03-06T09:57:15.4454376Z ##[group]Run actions/checkout@v2
+2024-03-06T09:57:15.4455014Z with:
+2024-03-06T09:57:15.4455565Z   repository: pranav-c01/cassandraconnectorpkg
+2024-03-06T09:57:15.4456402Z   token: ***
+2024-03-06T09:57:15.4456824Z   ssh-strict: true
+2024-03-06T09:57:15.4457302Z   persist-credentials: true
+2024-03-06T09:57:15.4457786Z   clean: true
+2024-03-06T09:57:15.4458179Z   fetch-depth: 1
+2024-03-06T09:57:15.4458602Z   lfs: false
+2024-03-06T09:57:15.4458994Z   submodules: false
+2024-03-06T09:57:15.4459428Z   set-safe-directory: true
+2024-03-06T09:57:15.4459914Z ##[endgroup]
+2024-03-06T09:57:15.6756406Z Syncing repository: pranav-c01/cassandraconnectorpkg
+2024-03-06T09:57:15.6759691Z ##[group]Getting Git version info
+2024-03-06T09:57:15.6761524Z Working directory is '/home/runner/work/cassandraconnectorpkg/cassandraconnectorpkg'
+2024-03-06T09:57:15.6764050Z [command]/usr/bin/git version
+2024-03-06T09:57:15.6765023Z git version 2.43.2
+2024-03-06T09:57:15.6790401Z ##[endgroup]
+2024-03-06T09:57:15.6805512Z Temporarily overriding HOME='/home/runner/work/_temp/f7f3643d-5a0d-472a-bd38-d79bc197699f' before making global git config changes
+2024-03-06T09:57:15.6807399Z Adding repository directory to the temporary git global config as a safe directory
+2024-03-06T09:57:15.6810800Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cassandraconnectorpkg/cassandraconnectorpkg
+2024-03-06T09:57:15.6856305Z Deleting the contents of '/home/runner/work/cassandraconnectorpkg/cassandraconnectorpkg'
+2024-03-06T09:57:15.6861168Z ##[group]Initializing the repository
+2024-03-06T09:57:15.6864745Z [command]/usr/bin/git init /home/runner/work/cassandraconnectorpkg/cassandraconnectorpkg
+2024-03-06T09:57:15.6944734Z hint: Using 'master' as the name for the initial branch. This default branch name
+2024-03-06T09:57:15.6946065Z hint: is subject to change. To configure the initial branch name to use in all
+2024-03-06T09:57:15.6947373Z hint: of your new repositories, which will suppress this warning, call:
+2024-03-06T09:57:15.6948225Z hint: 
+2024-03-06T09:57:15.6950057Z hint: 	git config --global init.defaultBranch <name>
+2024-03-06T09:57:15.6951047Z hint: 
+2024-03-06T09:57:15.6951922Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2024-03-06T09:57:15.6953311Z hint: 'development'. The just-created branch can be renamed via this command:
+2024-03-06T09:57:15.6954290Z hint: 
+2024-03-06T09:57:15.6954996Z hint: 	git branch -m <name>
+2024-03-06T09:57:15.6956993Z Initialized empty Git repository in /home/runner/work/cassandraconnectorpkg/cassandraconnectorpkg/.git/
+2024-03-06T09:57:15.6964208Z [command]/usr/bin/git remote add origin https://github.com/pranav-c01/cassandraconnectorpkg
+2024-03-06T09:57:15.7008005Z ##[endgroup]
+2024-03-06T09:57:15.7009029Z ##[group]Disabling automatic garbage collection
+2024-03-06T09:57:15.7012498Z [command]/usr/bin/git config --local gc.auto 0
+2024-03-06T09:57:15.7051755Z ##[endgroup]
+2024-03-06T09:57:15.7052598Z ##[group]Setting up auth
+2024-03-06T09:57:15.7058338Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2024-03-06T09:57:15.7096472Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2024-03-06T09:57:15.7440101Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2024-03-06T09:57:15.7479948Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2024-03-06T09:57:15.7743746Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2024-03-06T09:57:15.7800214Z ##[endgroup]
+2024-03-06T09:57:15.7801188Z ##[group]Fetching the repository
+2024-03-06T09:57:15.7813002Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +5354b1e144ac12ea43ef270666797d04d0703697:refs/remotes/origin/main
+2024-03-06T09:57:16.1273130Z remote: Enumerating objects: 24, done.        
+2024-03-06T09:57:16.1276111Z remote: Counting objects:   4% (1/24)        
+2024-03-06T09:57:16.1276877Z remote: Counting objects:   8% (2/24)        
+2024-03-06T09:57:16.1277781Z remote: Counting objects:  12% (3/24)        
+2024-03-06T09:57:16.1278814Z remote: Counting objects:  16% (4/24)        
+2024-03-06T09:57:16.1279629Z remote: Counting objects:  20% (5/24)        
+2024-03-06T09:57:16.1280422Z remote: Counting objects:  25% (6/24)        
+2024-03-06T09:57:16.1281081Z remote: Counting objects:  29% (7/24)        
+2024-03-06T09:57:16.1281704Z remote: Counting objects:  33% (8/24)        
+2024-03-06T09:57:16.1282425Z remote: Counting objects:  37% (9/24)        
+2024-03-06T09:57:16.1283077Z remote: Counting objects:  41% (10/24)        
+2024-03-06T09:57:16.1283715Z remote: Counting objects:  45% (11/24)        
+2024-03-06T09:57:16.1284446Z remote: Counting objects:  50% (12/24)        
+2024-03-06T09:57:16.1285138Z remote: Counting objects:  54% (13/24)        
+2024-03-06T09:57:16.1285750Z remote: Counting objects:  58% (14/24)        
+2024-03-06T09:57:16.1286473Z remote: Counting objects:  62% (15/24)        
+2024-03-06T09:57:16.1287153Z remote: Counting objects:  66% (16/24)        
+2024-03-06T09:57:16.1287767Z remote: Counting objects:  70% (17/24)        
+2024-03-06T09:57:16.1288498Z remote: Counting objects:  75% (18/24)        
+2024-03-06T09:57:16.1289172Z remote: Counting objects:  79% (19/24)        
+2024-03-06T09:57:16.1289784Z remote: Counting objects:  83% (20/24)        
+2024-03-06T09:57:16.1290525Z remote: Counting objects:  87% (21/24)        
+2024-03-06T09:57:16.1291190Z remote: Counting objects:  91% (22/24)        
+2024-03-06T09:57:16.1291797Z remote: Counting objects:  95% (23/24)        
+2024-03-06T09:57:16.1292514Z remote: Counting objects: 100% (24/24)        
+2024-03-06T09:57:16.1293230Z remote: Counting objects: 100% (24/24), done.        
+2024-03-06T09:57:16.1293982Z remote: Compressing objects:   5% (1/17)        
+2024-03-06T09:57:16.1294873Z remote: Compressing objects:  11% (2/17)        
+2024-03-06T09:57:16.1296083Z remote: Compressing objects:  17% (3/17)        
+2024-03-06T09:57:16.1297244Z remote: Compressing objects:  23% (4/17)        
+2024-03-06T09:57:16.1298545Z remote: Compressing objects:  29% (5/17)        
+2024-03-06T09:57:16.1299685Z remote: Compressing objects:  35% (6/17)        
+2024-03-06T09:57:16.1301150Z remote: Compressing objects:  41% (7/17)        
+2024-03-06T09:57:16.1302648Z remote: Compressing objects:  47% (8/17)        
+2024-03-06T09:57:16.1303878Z remote: Compressing objects:  52% (9/17)        
+2024-03-06T09:57:16.1305058Z remote: Compressing objects:  58% (10/17)        
+2024-03-06T09:57:16.1306359Z remote: Compressing objects:  64% (11/17)        
+2024-03-06T09:57:16.1307456Z remote: Compressing objects:  70% (12/17)        
+2024-03-06T09:57:16.1308845Z remote: Compressing objects:  76% (13/17)        
+2024-03-06T09:57:16.1310123Z remote: Compressing objects:  82% (14/17)        
+2024-03-06T09:57:16.1311239Z remote: Compressing objects:  88% (15/17)        
+2024-03-06T09:57:16.1312441Z remote: Compressing objects:  94% (16/17)        
+2024-03-06T09:57:16.1313745Z remote: Compressing objects: 100% (17/17)        
+2024-03-06T09:57:16.1314944Z remote: Compressing objects: 100% (17/17), done.        
+2024-03-06T09:57:16.1316784Z remote: Total 24 (delta 1), reused 18 (delta 0), pack-reused 0        
+2024-03-06T09:57:16.1408776Z From https://github.com/pranav-c01/cassandraconnectorpkg
+2024-03-06T09:57:16.1409896Z  * [new ref]         5354b1e144ac12ea43ef270666797d04d0703697 -> origin/main
+2024-03-06T09:57:16.1436310Z ##[endgroup]
+2024-03-06T09:57:16.1437175Z ##[group]Determining the checkout info
+2024-03-06T09:57:16.1438794Z ##[endgroup]
+2024-03-06T09:57:16.1439654Z ##[group]Checking out the ref
+2024-03-06T09:57:16.1443027Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2024-03-06T09:57:16.1507689Z Switched to a new branch 'main'
+2024-03-06T09:57:16.1509730Z branch 'main' set up to track 'origin/main'.
+2024-03-06T09:57:16.1513808Z ##[endgroup]
+2024-03-06T09:57:16.1562666Z [command]/usr/bin/git log -1 --format='%H'
+2024-03-06T09:57:16.1596828Z '5354b1e144ac12ea43ef270666797d04d0703697'
