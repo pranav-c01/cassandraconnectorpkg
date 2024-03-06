@@ -39,7 +39,7 @@ setup(
     },
     packages=find_packages(),
     install_requires = get_requirements("./requirements.txt")
-#["astrapy==0.2.0","pandas","numpy","ensure","pytest==7.1.3"]
+#["astrapy==0.2.0","pandas","numpy","ensure","pytest==7.1.3"] #
     )
 
 
