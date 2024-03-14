@@ -1,12 +1,67 @@
-[build-system]
-requires = ['setuptools>=42.0', "wheel"]
-build-backend = "setuptools.build_meta"
+[tool.poetry]
+name = "casdbops"
+version = "0.0.1"
+description = "Casdbops is a library to automate collection creation , document insertion , document deletion in datastax astradb platform "
+authors = [
+    "Pranav Jindal <pranavjindal43@gmail.com>"
+]
+license = "Apache-2.0"
+readme = "README.md"
+packages = [
+    { include = "casdbops" }
+]
+keywords = ["Databaseautomation", "casdbops"]
+homepage = "https://github.com/pranav-c01/cassandraconnectorpkg"
+repository = "https://github.com/pranav-c01/cassandraconnectorpkg"
+classifiers = [
+    "Development Status :: Completed",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9"
+]
 
-[tool.pytest.ini_options]
-testpaths = [
-    "tests"
-    ]
+[tool.poetry.dependencies]
+python = "^3.8.0"
+toml = "^0.10.2"
+astrapy=="0.2.0"
+pandas=="1.3.5"
+numpy=="1.26.4"
+pytest=="7.1.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest=="7.1.3"
+tox=="3.25.1"
+black=="22.8.0"
+flake8=="5.0.4"
+mypy=="0.971"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.mypy]
-mypy_path = "src"
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+follow_imports = "normal"
 ignore_missing_imports = true
+no_implicit_reexport = true
+show_error_codes = true
+show_error_context = true
+strict_equality = true
+strict_optional = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+filterwarnings = "ignore::DeprecationWarning"
+addopts = "-v --cov=astrapy --testdox --cov-report term-missing"
+asyncio_mode = "auto"
+log_cli = 1
+log_cli_level = "INFO"

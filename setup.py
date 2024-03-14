@@ -18,9 +18,9 @@ def get_requirements(file_path):
 
     return requirements
 
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 REPO_NAME = "cassandraconnectorpkg"
-PKG_NAME= "cassdbcrud"
+PKG_NAME= "casdbops"
 AUTHOR_USER_NAME = "pranav-c01"
 AUTHOR_EMAIL = "pranavc430@gmail.com"
 
