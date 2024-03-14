@@ -1,4 +1,4 @@
-astrapy==0.2.0
+astrapy==0.7.7
 pandas
 numpy
 ensure
