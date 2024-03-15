@@ -33,7 +33,7 @@ setup(
     long_description=long_description,
     long_description_content="text/markdown",
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
-    project_urls={"Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",},
+    project_urls={"Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues"},
     packages=find_packages(),
     install_requires = ["astrapy==0.7.7","pandas==1.3.5","numpy==1.26.4"]
     )
