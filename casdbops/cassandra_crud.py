@@ -13,11 +13,12 @@ class cassandra_operation:
     After Creation of DataBase Copy API Endpoint from User dashboard And provide it for creating collection 
     Give Collection Name
     Give Dataset path'''
+
     def __init__(self,token):
         self.client=AstraDBOps(token)
         self.token = token
     
-    def create_database(self,database_name="test",passwd=None):
+    def create_database(self,database_name="test",passwd=None,connect_to_same_database=True):
         self.database_name=database_name
         if passwd!=None:
             try:
@@ -32,6 +33,11 @@ class cassandra_operation:
                     "password": passwd,
                     "dbType": "vector"}
                 self.DB_response = self.client.create_database(database_definition=database_definition)   
+
+                if connect_to_same_database==True:
+                    self.db = self.connect_to_database(api_endpoint=f"https://{self.DB_response['id']}-us-east1.apps.astra.datastax.com"
+                    return self.db
+
                 return self.DB_response 
             except Exception as e:
                 print(e)   
@@ -55,11 +61,11 @@ class cassandra_operation:
     def create_collection(self,collection_name="Collection_test"):
         self.collection_name = collection_name
         try:
-            # create new collection        
-            self.collection_obj = AstraDBCollection(collection_name=self.collection_name, astra_db=self.db)
+            # create new collection 
+            self.collection_obj = self.db.create_collection(collection_name=self.collection_name)       
 
             # Delete all documents in the collection
-            self.collection_obj.delete_many(filter={})
+            #collection_obj.delete_many(filter={})
             return self.collection_obj
         except Exception as e:
             print(e)
@@ -69,10 +75,10 @@ class cassandra_operation:
         if dataset_path!=None:
             try:
                 if dataset_path.endswith('.csv'):
-                    df = pd.read.csv(dataset_path,encoding='utf-8')
+                    df = pd.read_csv(dataset_path)
                     
                 elif dataset_path.endswith(".xlsx"):
-                    df = pd.read_excel(dataset_path,encoding='utf-8')
+                    df = pd.read_excel(dataset_path)
 
                 json_list = []
 
@@ -95,7 +101,7 @@ class cassandra_operation:
             print("Invalid Dataset path ")
             return
         
-    def Fetch_data_from_collection(self,):
+    def Fetch_data_from_collection(self):
         try:
             generator = self.collection_obj.paginated_find(
                         filter={},
@@ -108,4 +114,4 @@ class cassandra_operation:
             return df_retrieved
         except Exception as e:
             print(e)
-            return
+    
